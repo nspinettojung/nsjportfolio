@@ -1,0 +1,96 @@
+<!-- <nav class="navbar sticky-top navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container-fluid justify-content-center position-relative">
+    <a href="" class="navbar-brand me-0 position-absolute start-0 ms-2"
+      >Nicolás Spinetto Jung</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span>Menu</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        @for (item of links; track $index) {
+        <li class="nav-item">
+          <a href="{{ item.link }}" class="nav-link">{{ item.text }}</a>
+        </li>
+        }
+      </ul>
+    </div>
+    <div class="position-absolute end-0 me-2">
+      <nsj-button bClass="btn btn-outline-light" text="Log In"></nsj-button>
+    </div>
+  </div>
+</nav> -->
+
+<div class="layout-container flex h-full grow flex-col bg-[#101a23]">
+  <header
+    class="relative border-b border-[#223649] px-4 py-3 md:flex items-center justify-between text-white"
+  >
+    <!-- Logo + Title -->
+    <div class="flex items-center gap-4">
+      <div class="size-4">
+        <!-- SVG Icon -->
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M39.475...Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+      <h2 class="text-lg font-bold tracking-tight">Tech Portfolio</h2>
+    </div>
+
+    <!-- Hamburger button (mobile only) -->
+    <button
+      id="menu-toggle"
+      class="md:hidden absolute right-4 top-4 text-white focus:outline-none"
+      (click)="toggleMenu()"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Menu -->
+    <div
+      id="menu-content"
+      class="hidden flex-col gap-6 mt-4 md:mt-0 md:flex md:flex-row md:items-center md:gap-8 md:ml-auto"
+      [ngClass]="{
+    'hidden': !isMenuOpen,
+    'flex': isMenuOpen,
+    'flex-col gap-6': true
+  }"
+    >
+      <nav
+        class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-9"
+      >
+        <a class="text-sm font-medium" href="#">About</a>
+        <a class="text-sm font-medium" href="#">Skills</a>
+        <a class="text-sm font-medium" href="#">Projects</a>
+        <a class="text-sm font-medium" href="#">Contact</a>
+      </nav>
+      <button
+        class="h-10 px-4 bg-[#0c7ff2] text-white rounded-lg text-sm font-bold"
+      >
+        <span class="truncate">Resume</span>
+      </button>
+    </div>
+  </header>
+</div>
