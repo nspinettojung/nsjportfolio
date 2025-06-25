@@ -1,4 +1,4 @@
-<nav class="layout-container flex h-full grow flex-col bg-[#101a23]">
+<nav class="sticky top-0 z-50 layout-container flex grow flex-col bg-[#101a23]">
   <div
     class="relative border-b border-[#223649] px-4 py-3 md:flex items-center justify-between text-white"
   >
@@ -50,19 +50,20 @@
       <nav
         class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-9"
       >
-        @for (item of links; track $index) {
+        @for (item of links(); track $index) {
         <a
           class="text-sm font-medium text-white transition-colors duration-200 hover:text-[#0c7ff2] hover:underline underline-offset-4"
-          href="{{item.link}}"
+          [routerLink]="['{{item.link}}']"
+          fragment="{{item.fragmentL}}"
           >{{item.text}}</a
         >
         }
       </nav>
-      <button
-        class="h-10 px-4 bg-[#0c7ff2] text-white rounded-lg text-sm font-bold"
+      <nsj-button
+        text="Resume"
+        bClass="h-10 px-4 bg-[#0c7ff2] text-white rounded-lg text-sm font-bold"
       >
-        <span class="truncate">Resume</span>
-      </button>
+      </nsj-button>
     </div>
   </div>
 </nav>

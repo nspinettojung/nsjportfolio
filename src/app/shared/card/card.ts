@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
+import { ICards } from '../../core/interface/icards';
+import { Button } from '../button/button';
 
 @Component({
-  selector: 'app-card',
-  imports: [],
+  selector: 'nsj-card',
+  imports: [Button],
   templateUrl: './card.html',
-  styleUrl: './card.scss'
+ 
 })
 export class Card {
-
+  type = input<string>();
+  name = input<string>();
+  description = input<string>();
+  url = input<string>();
 }

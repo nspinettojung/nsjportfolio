@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'nsj-about',
   imports: [],
   templateUrl: './about.html',
-  styleUrl: './about.scss'
+  
 })
 export class About {
 

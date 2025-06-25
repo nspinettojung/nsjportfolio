@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'nsj-skills',
   imports: [],
   templateUrl: './skills.html',
-  styleUrl: './skills.scss'
+  
 })
 export class Skills {
 

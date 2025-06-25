@@ -1,13 +1,14 @@
 import { NgClass } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
   selector: 'nsj-button',
   imports: [NgClass],
   templateUrl: './button.html',
-  styleUrl: './button.scss',
+  
 })
 export class Button {
-  @Input() text: string = '';
-  @Input() bClass: string | string[] = '';
+  text = input<string>('');
+  bClass = input<string | string[]>('');
+  href = input<string>('');
 }

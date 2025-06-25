@@ -1,10 +1,12 @@
 <div
-  class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark group/design-root overflow-x-hidden"
+  class="relative size-full min-h-screen flex-col bg-[#101a23] dark group/design-root"
   style="font-family: Inter, 'Noto Sans', sans-serif"
 >
   <nsj-navbar></nsj-navbar>
-  <nsj-about></nsj-about>
-  <nsj-skills></nsj-skills>
-  <nsj-projects></nsj-projects>
-  <nsj-contact></nsj-contact>
+  <div class="flex flex-col">
+    <nsj-about></nsj-about>
+    <nsj-skills></nsj-skills>
+    <nsj-projects></nsj-projects>
+    <nsj-contact></nsj-contact>
+  </div>
 </div>

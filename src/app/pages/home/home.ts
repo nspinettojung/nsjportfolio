@@ -9,7 +9,7 @@ import { Contact } from "../contact/contact";
   selector: 'app-home',
   imports: [Navbar, About, Skills, Projects, Contact],
   templateUrl: './home.html',
-  styleUrl: './home.scss'
+  
 })
 export class Home {
 

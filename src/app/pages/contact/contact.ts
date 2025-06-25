@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { Button } from "../../shared/button/button";
 
 @Component({
   selector: 'nsj-contact',
-  imports: [],
+  imports: [Button],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss'
+  
 })
 export class Contact {
 
